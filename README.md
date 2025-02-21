@@ -23,9 +23,11 @@ Mediates data:
 - IWriteItem *Parent* - a read-only property that contains a reference to the parent (IWriteItem).
 
 The **IWriteItemPassedData** interface is used to pass sensor data when an event is triggered when the virtual sensor value changes.
-Example:
-`EventManager.TriggerEvent("onWriteItemValueChanged", new PassedData : IWriteItemPassedData)`
 Mediates data:
 - string *ObjectName* - the name of the AAS object, e.g. "ns=11;s=BeamSensor", taken from *Parent*,
 - string *AasProperty* - the target property in the OperationalData Submodel in the AAS, a text string, e.g. "Hit" when the opto-sensor is intercepted,
 - object *Value* - the value that the sensor writes.
+
+Example:
+`EventManager.TriggerEvent("onWriteItemValueChanged", new PassedData : IWriteItemPassedData)`
+
